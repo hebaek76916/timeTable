@@ -12,6 +12,19 @@
 		133055552A431CB900F8240D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055542A431CB900F8240D /* ViewController.swift */; };
 		1330555A2A431CBA00F8240D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133055592A431CBA00F8240D /* Assets.xcassets */; };
 		1330555D2A431CBA00F8240D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1330555B2A431CBA00F8240D /* LaunchScreen.storyboard */; };
+		133055662A4320E500F8240D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 133055652A4320E500F8240D /* Alamofire */; };
+		133055682A4325C300F8240D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055672A4325C300F8240D /* HTTPClient.swift */; };
+		1330556B2A43282900F8240D /* LecturesEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330556A2A43282900F8240D /* LecturesEndPoints.swift */; };
+		1330556D2A4341CF00F8240D /* LecturesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330556C2A4341CF00F8240D /* LecturesResponseModel.swift */; };
+		1330556F2A4343DD00F8240D /* LecturesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330556E2A4343DD00F8240D /* LecturesService.swift */; };
+		133055892A44B30200F8240D /* WeekDayColumnTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055882A44B30200F8240D /* WeekDayColumnTableView.swift */; };
+		1330558B2A45297F00F8240D /* TimeScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330558A2A45297F00F8240D /* TimeScheduleCell.swift */; };
+		1330558D2A4533B100F8240D /* TimeTableUIPropertyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330558C2A4533B100F8240D /* TimeTableUIPropertyValues.swift */; };
+		1330558F2A45493F00F8240D /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330558E2A45493F00F8240D /* TimeTableView.swift */; };
+		133055912A45577B00F8240D /* WeekDayColumnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055902A45577B00F8240D /* WeekDayColumnCell.swift */; };
+		133055932A45976D00F8240D /* TimeIndexTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055922A45976D00F8240D /* TimeIndexTableView.swift */; };
+		133055952A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055942A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift */; };
+		133055972A459C0A00F8240D /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055962A459C0A00F8240D /* Extensions+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +35,19 @@
 		133055592A431CBA00F8240D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1330555C2A431CBA00F8240D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1330555E2A431CBA00F8240D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133055672A4325C300F8240D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		1330556A2A43282900F8240D /* LecturesEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesEndPoints.swift; sourceTree = "<group>"; };
+		1330556C2A4341CF00F8240D /* LecturesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesResponseModel.swift; sourceTree = "<group>"; };
+		1330556E2A4343DD00F8240D /* LecturesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesService.swift; sourceTree = "<group>"; };
+		133055842A44966400F8240D /* TimeTable copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeTable copy-Info.plist"; path = "/Users/hyeon-eunbaeg/Desktop/TimeTable/TimeTable copy-Info.plist"; sourceTree = "<absolute>"; };
+		133055882A44B30200F8240D /* WeekDayColumnTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayColumnTableView.swift; sourceTree = "<group>"; };
+		1330558A2A45297F00F8240D /* TimeScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScheduleCell.swift; sourceTree = "<group>"; };
+		1330558C2A4533B100F8240D /* TimeTableUIPropertyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableUIPropertyValues.swift; sourceTree = "<group>"; };
+		1330558E2A45493F00F8240D /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		133055902A45577B00F8240D /* WeekDayColumnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayColumnCell.swift; sourceTree = "<group>"; };
+		133055922A45976D00F8240D /* TimeIndexTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndexTableView.swift; sourceTree = "<group>"; };
+		133055942A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndexCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		133055962A459C0A00F8240D /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133055662A4320E500F8240D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +67,7 @@
 			children = (
 				1330554F2A431CB900F8240D /* TimeTable */,
 				1330554E2A431CB900F8240D /* Products */,
+				133055842A44966400F8240D /* TimeTable copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +85,55 @@
 				133055502A431CB900F8240D /* AppDelegate.swift */,
 				133055522A431CB900F8240D /* SceneDelegate.swift */,
 				133055542A431CB900F8240D /* ViewController.swift */,
+				133055692A43280700F8240D /* APIServices */,
+				133055852A44B2B700F8240D /* TimeTableConfigures */,
 				133055592A431CBA00F8240D /* Assets.xcassets */,
 				1330555B2A431CBA00F8240D /* LaunchScreen.storyboard */,
 				1330555E2A431CBA00F8240D /* Info.plist */,
 			);
 			path = TimeTable;
+			sourceTree = "<group>";
+		};
+		133055692A43280700F8240D /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				133055672A4325C300F8240D /* HTTPClient.swift */,
+				1330556A2A43282900F8240D /* LecturesEndPoints.swift */,
+				1330556E2A4343DD00F8240D /* LecturesService.swift */,
+				1330556C2A4341CF00F8240D /* LecturesResponseModel.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		133055852A44B2B700F8240D /* TimeTableConfigures */ = {
+			isa = PBXGroup;
+			children = (
+				133055962A459C0A00F8240D /* Extensions+UIView.swift */,
+				1330558C2A4533B100F8240D /* TimeTableUIPropertyValues.swift */,
+				1330558E2A45493F00F8240D /* TimeTableView.swift */,
+				133055982A45A2EA00F8240D /* WeekViewCells */,
+			);
+			path = TimeTableConfigures;
+			sourceTree = "<group>";
+		};
+		133055982A45A2EA00F8240D /* WeekViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				133055942A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift */,
+				133055902A45577B00F8240D /* WeekDayColumnCell.swift */,
+				1330558A2A45297F00F8240D /* TimeScheduleCell.swift */,
+				133055992A45A31300F8240D /* ColumViews */,
+			);
+			path = WeekViewCells;
+			sourceTree = "<group>";
+		};
+		133055992A45A31300F8240D /* ColumViews */ = {
+			isa = PBXGroup;
+			children = (
+				133055922A45976D00F8240D /* TimeIndexTableView.swift */,
+				133055882A44B30200F8240D /* WeekDayColumnTableView.swift */,
+			);
+			path = ColumViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +152,9 @@
 			dependencies = (
 			);
 			name = TimeTable;
+			packageProductDependencies = (
+				133055652A4320E500F8240D /* Alamofire */,
+			);
 			productName = TimeTable;
 			productReference = 1330554D2A431CB900F8240D /* TimeTable.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +183,9 @@
 				Base,
 			);
 			mainGroup = 133055442A431CB900F8240D;
+			packageReferences = (
+				133055642A4320E500F8240D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1330554E2A431CB900F8240D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,9 +212,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133055952A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift in Sources */,
 				133055552A431CB900F8240D /* ViewController.swift in Sources */,
+				1330556F2A4343DD00F8240D /* LecturesService.swift in Sources */,
+				133055932A45976D00F8240D /* TimeIndexTableView.swift in Sources */,
+				133055892A44B30200F8240D /* WeekDayColumnTableView.swift in Sources */,
+				1330558B2A45297F00F8240D /* TimeScheduleCell.swift in Sources */,
+				1330556D2A4341CF00F8240D /* LecturesResponseModel.swift in Sources */,
 				133055512A431CB900F8240D /* AppDelegate.swift in Sources */,
+				133055912A45577B00F8240D /* WeekDayColumnCell.swift in Sources */,
+				133055682A4325C300F8240D /* HTTPClient.swift in Sources */,
+				1330558F2A45493F00F8240D /* TimeTableView.swift in Sources */,
 				133055532A431CB900F8240D /* SceneDelegate.swift in Sources */,
+				1330556B2A43282900F8240D /* LecturesEndPoints.swift in Sources */,
+				1330558D2A4533B100F8240D /* TimeTableUIPropertyValues.swift in Sources */,
+				133055972A459C0A00F8240D /* Extensions+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +434,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		133055642A4320E500F8240D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		133055652A4320E500F8240D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 133055642A4320E500F8240D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 133055452A431CB900F8240D /* Project object */;
 }
