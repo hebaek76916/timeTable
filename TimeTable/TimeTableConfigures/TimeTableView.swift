@@ -9,9 +9,7 @@ import UIKit
 
 class WeekView: UICollectionView {
     
-    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
-
         let flow = UICollectionViewFlowLayout()
         flow.scrollDirection = .horizontal
         flow.minimumInteritemSpacing = 1

@@ -18,8 +18,10 @@ class TimeIndexTableView: UITableView {
         super.init(frame: frame, style: .plain)
         delegate = self
         dataSource = self
-        separatorStyle = .none
+//        separatorStyle = .none
         bounces = false
+        tableHeaderView = UIView(frame: .init(x: 0, y: 0, width: 20, height: TimeTableUIPropertyValues.weekDayHeaderHeight))
+        self.register(TimeIndexTableViewCell.self, forCellReuseIdentifier: TimeIndexTableViewCell.identifier)
     }
     
     required init?(coder: NSCoder) {
@@ -35,12 +37,14 @@ class TimeIndexTableView: UITableView {
 extension TimeIndexTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 24
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //TODO: timeIndex
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TimeIndexTableViewCell.identifier, for: indexPath) as? TimeIndexTableViewCell else { return UITableViewCell() }
+        cell.timeLabel.text = "\(String(format: "%02d", indexPath.row)):00"
+        cell.backgroundColor = .clear
+        return cell
     }
     
 }

@@ -30,6 +30,10 @@
 		133055A02A46952300F8240D /* Extension+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330559F2A46952300F8240D /* Extension+DateFormatter.swift */; };
 		133055A22A4727EB00F8240D /* SearchLectureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055A12A4727EB00F8240D /* SearchLectureCell.swift */; };
 		133055A82A47495E00F8240D /* Extension+SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055A72A47495E00F8240D /* Extension+SwiftUIView.swift */; };
+		133055AB2A474C3000F8240D /* LectureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055AA2A474C3000F8240D /* LectureDetailViewController.swift */; };
+		133055AD2A47508F00F8240D /* DetailDescriptionsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055AC2A47508F00F8240D /* DetailDescriptionsViewCell.swift */; };
+		133055AF2A4763D500F8240D /* DetailMemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055AE2A4763D500F8240D /* DetailMemoCell.swift */; };
+		133055B22A47734600F8240D /* TimeIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B12A47734600F8240D /* TimeIndexTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		1330559F2A46952300F8240D /* Extension+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+DateFormatter.swift"; sourceTree = "<group>"; };
 		133055A12A4727EB00F8240D /* SearchLectureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLectureCell.swift; sourceTree = "<group>"; };
 		133055A72A47495E00F8240D /* Extension+SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SwiftUIView.swift"; sourceTree = "<group>"; };
+		133055AA2A474C3000F8240D /* LectureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailViewController.swift; sourceTree = "<group>"; };
+		133055AC2A47508F00F8240D /* DetailDescriptionsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDescriptionsViewCell.swift; sourceTree = "<group>"; };
+		133055AE2A4763D500F8240D /* DetailMemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoCell.swift; sourceTree = "<group>"; };
+		133055B12A47734600F8240D /* TimeIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndexTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,10 @@
 				1330559A2A45BB0100F8240D /* MainNaviController.swift */,
 				133055542A431CB900F8240D /* ViewController.swift */,
 				133055692A43280700F8240D /* APIServices */,
-				1330559E2A45E23800F8240D /* Extensions */,
-				133055A92A4749CA00F8240D /* Search */,
 				133055852A44B2B700F8240D /* TimeTableConfigures */,
+				133055B02A4770C200F8240D /* Details */,
+				133055A92A4749CA00F8240D /* Search */,
+				1330559E2A45E23800F8240D /* Extensions */,
 				133055592A431CBA00F8240D /* Assets.xcassets */,
 				1330555B2A431CBA00F8240D /* LaunchScreen.storyboard */,
 				1330555E2A431CBA00F8240D /* Info.plist */,
@@ -134,6 +143,7 @@
 				133055942A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift */,
 				133055902A45577B00F8240D /* WeekDayColumnCell.swift */,
 				1330558A2A45297F00F8240D /* TimeScheduleCell.swift */,
+				133055B12A47734600F8240D /* TimeIndexTableViewCell.swift */,
 				133055992A45A31300F8240D /* ColumViews */,
 			);
 			path = WeekViewCells;
@@ -165,6 +175,16 @@
 				133055A12A4727EB00F8240D /* SearchLectureCell.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		133055B02A4770C200F8240D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				133055AA2A474C3000F8240D /* LectureDetailViewController.swift */,
+				133055AC2A47508F00F8240D /* DetailDescriptionsViewCell.swift */,
+				133055AE2A4763D500F8240D /* DetailMemoCell.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +267,7 @@
 				133055552A431CB900F8240D /* ViewController.swift in Sources */,
 				1330556F2A4343DD00F8240D /* LecturesService.swift in Sources */,
 				133055932A45976D00F8240D /* TimeIndexTableView.swift in Sources */,
+				133055AF2A4763D500F8240D /* DetailMemoCell.swift in Sources */,
 				133055892A44B30200F8240D /* WeekDayColumnTableView.swift in Sources */,
 				1330558B2A45297F00F8240D /* TimeScheduleCell.swift in Sources */,
 				133055A02A46952300F8240D /* Extension+DateFormatter.swift in Sources */,
@@ -257,9 +278,12 @@
 				133055682A4325C300F8240D /* HTTPClient.swift in Sources */,
 				1330559D2A45BDF900F8240D /* SearchController.swift in Sources */,
 				1330559B2A45BB0100F8240D /* MainNaviController.swift in Sources */,
+				133055AB2A474C3000F8240D /* LectureDetailViewController.swift in Sources */,
 				1330558F2A45493F00F8240D /* TimeTableView.swift in Sources */,
+				133055B22A47734600F8240D /* TimeIndexTableViewCell.swift in Sources */,
 				133055532A431CB900F8240D /* SceneDelegate.swift in Sources */,
 				133055A22A4727EB00F8240D /* SearchLectureCell.swift in Sources */,
+				133055AD2A47508F00F8240D /* DetailDescriptionsViewCell.swift in Sources */,
 				1330556B2A43282900F8240D /* LecturesEndPoints.swift in Sources */,
 				1330558D2A4533B100F8240D /* TimeTableUIPropertyValues.swift in Sources */,
 				133055972A459C0A00F8240D /* Extension+UIView.swift in Sources */,

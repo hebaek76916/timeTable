@@ -13,7 +13,6 @@ class LectureData: ObservableObject {
     
     init(item: Item) {
         self.item = item
-        
     }
 }
 
@@ -43,35 +42,36 @@ struct LectureView: View {
     @ObservedObject var lecture: LectureData
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            Text(lecture.item.lecture ?? "")
-                .font(.title)
-            HStack {
-                Image(systemName: "clock")
+        HStack {
+            VStack(alignment: .leading, spacing: 4) {
+                Text(lecture.item.lecture ?? "")
+                    .font(.title)
                 HStack {
-                    Text(lecture.item.startTime ?? "")
-                    Text("-")
-                    Text(lecture.item.endTime ?? "")
+                    Image(systemName: "clock")
+                    HStack {
+                        Text(lecture.item.startTime ?? "")
+                        Text("-")
+                        Text(lecture.item.endTime ?? "")
+                        
+                    }
+                    
+                    Text("|")
+                    
+                    Text(
+                        "\((lecture.item.dayofweek ?? []).map { "(\($0.rawValue))" }.joined(separator: ", "))"
+                    )
                     
                 }
-                
-                Text("|")
-                
-                ForEach((lecture.item.dayofweek ?? []), id: \.self) { weekDay in
-                    Text("(\(weekDay.rawValue))")
+                VStack(alignment: .leading) {
+                    Text("교과목 코드 : \(lecture.item.code ?? "")")
+                    Text("담당 교수 : \(lecture.item.professor ?? "")")
+                    Text("강의실 : \(lecture.item.location ?? "")")
                 }
-                
+                .foregroundColor(.gray)
             }
-            VStack(alignment: .leading) {
-                Text("교과목 코드 : \(lecture.item.code ?? "")")
-                Text("담당 교수 : \(lecture.item.professor ?? "")")
-                Text("강의실 : \(lecture.item.location ?? "")")
-            }
-            .foregroundColor(.gray)
+            Spacer()
         }
-        .padding()
-        
-        
+        .padding(.leading)
     }
 }
 
