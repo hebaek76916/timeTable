@@ -10,11 +10,10 @@ import Foundation
 struct TimeTableUIPropertyValues {
     
     // 1 minute gap height
-    static var minuteGap: CGFloat = 2
-    
+    static let minuteGap: CGFloat = 2
     static var hourGap: CGFloat {
         return Self.minuteGap * 60
     }
     
-    static var weekDayHeaderHeight: CGFloat = 50
+    static let weekDayHeaderHeight: CGFloat = 50
 }

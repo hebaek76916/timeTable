@@ -22,6 +22,11 @@ public protocol HTTPClient {
 
 class URLSessionHTTPClient: HTTPClient {
     
+    static let baseUrlString = "https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers"
+    static let apiKey = "QJuHAX8evMY24jvpHfHQ4pHGetlk5vn8FJbk70O6"
+    //https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers/lectures
+    //-H "x-api-key : QJuHAX8evMY24jvpHfHQ4pHGetlk5vn8FJbk70O6" -H "Content-Type: application/json"
+    
     private let session: URLSession
     
     init(session: URLSession = .shared) {
@@ -42,14 +47,14 @@ class URLSessionHTTPClient: HTTPClient {
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        request.setValue(apiKey, forHTTPHeaderField: "x-api-key")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        print("⚠️", request.url!.absoluteString)
-        print("⚠️⚠️", request.allHTTPHeaderFields)
-        print("⚠️⚠️⚠️", request.httpMethod)
-        
-        
-        
+        request.setValue(
+            URLSessionHTTPClient.apiKey,
+            forHTTPHeaderField: "x-api-key"
+        )
+        request.setValue(
+            "application/json",
+            forHTTPHeaderField: "Content-Type"
+        )
         
         let task = session.dataTask(with: request) { data, response, error in
             completion(Result {
@@ -64,7 +69,8 @@ class URLSessionHTTPClient: HTTPClient {
                 } else {
                     throw UnexpectedValuesRepresentation()
                 }
-            })
+            }
+            )
         }
         task.resume()
         return URLSessionTaskWrapper(wrapped: task)

@@ -1,5 +1,5 @@
 //
-//  Extensions+UIView.swift
+//  Extension+UIView.swift
 //  TimeTable
 //
 //  Created by 현은백 on 2023/06/23.

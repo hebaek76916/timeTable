@@ -36,7 +36,6 @@ import Foundation
 }
 */
 
-// MARK: - Welcome
 struct LecturesResponse: Decodable {
     let items: [Item]?
     let count, scannedCount: Int?
@@ -46,33 +45,66 @@ struct LecturesResponse: Decodable {
         case count = "Count"
         case scannedCount = "ScannedCount"
     }
+}
+
+struct Item: Decodable {
+    let dayofweek: [Dayofweek]?
+    let code, location, lecture, professor: String?
     
-    // MARK: - Item
-    struct Item: Decodable {
-        let dayofweek: [Dayofweek]?
-        let code, location, lecture, professor: String?
+    let startTime: String?
+    let endTime: String?
+    
+    init(dayofweek: [Dayofweek]?, code: String?, location: String?, lecture: String?, professor: String?, startTime: String?, endTime: String?) {
+        self.dayofweek = dayofweek
+        self.code = code
+        self.location = location
+        self.lecture = lecture
+        self.professor = professor
+        self.startTime = startTime
         
-        let startTime: String?//TODO: 시간 칸 구해야됨.
-        let endTime: String?//TODO: 시간 칸 구해야됨.
-        
-        enum CodingKeys: String, CodingKey {
-            case dayofweek, code, location, lecture, professor
-            case startTime = "start_time"
-            case endTime = "end_time"
-        }
-        
-        enum Dayofweek: String, Decodable {
-            case 월
-            case 화
-            case 수
-            case 목
-            case 금
-            case 토
-            case 일
-        }
+        self.endTime = endTime
     }
     
     
+    var start: Date? {
+        guard let startTime else { return nil }
+        return DateFormatter.toDate(startTime)
+    }
+    
+    var end: Date? {
+        guard let endTime else { return nil }
+        return DateFormatter.toDate(endTime)
+    }
+    
+    var totalMinutes: Int {
+        guard
+            let start,
+            let end
+        else { return 0 }
+        return start.minuteDiff(end)
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case dayofweek, code, location, lecture, professor
+        case startTime = "start_time"
+        case endTime = "end_time"
+    }
+    
+    enum Dayofweek: String, Decodable {
+        case 월, 화, 수, 목, 금, 토, 일
+
+        var weekDay: WeekDay {
+            switch self {
+            case .월 : return .mon
+            case .화 : return .tue
+            case .수 : return .wed
+            case .목 : return .thu
+            case .금 : return .fri
+            case .토 : return .sat
+            case .일 : return .sun
+            }
+        }
+    }
 }
 
 enum LectureResponseMapper {
@@ -84,9 +116,8 @@ enum LectureResponseMapper {
             response.statusCode == statusCode200
         else { return .failure(.invalidStatusCode) }
 
-//        let str = String(data: data, encoding: .utf8)
         guard
-            let json = try? JSONDecoder().decode(LecturesResponse.self, from: data)//(str?.data(using: .utf8))!)
+            let json = try? JSONDecoder().decode(LecturesResponse.self, from: data)
         else { return .failure(.invalidData) }
         
         return .success(json)

@@ -6,12 +6,6 @@
 //
 
 import Foundation
-//TODO: 옮겨야함.
-let baseUrlString = "https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers"
-let apiKey = "QJuHAX8evMY24jvpHfHQ4pHGetlk5vn8FJbk70O6"
-
-//https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers/lectures
-//-H "x-api-key : QJuHAX8evMY24jvpHfHQ4pHGetlk5vn8FJbk70O6" -H "Content-Type: application/json"
 
 public enum LecturesEndPoint {
     /*
@@ -26,7 +20,7 @@ public enum LecturesEndPoint {
     case lecturesName(_ name: String)
     
     public func url() -> URL {
-        let urlString = baseUrlString
+        let urlString = URLSessionHTTPClient.baseUrlString
         let baseURL = URL(string: urlString)!
         var components = URLComponents()
         components.scheme = baseURL.scheme
@@ -35,7 +29,7 @@ public enum LecturesEndPoint {
         
         switch self {
         case .lectures:
-            return URL(string: urlString)!
+            return components.url!
             
         case .lecturesCode(let code):
             components.queryItems = [

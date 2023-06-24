@@ -24,7 +24,12 @@
 		133055912A45577B00F8240D /* WeekDayColumnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055902A45577B00F8240D /* WeekDayColumnCell.swift */; };
 		133055932A45976D00F8240D /* TimeIndexTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055922A45976D00F8240D /* TimeIndexTableView.swift */; };
 		133055952A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055942A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift */; };
-		133055972A459C0A00F8240D /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055962A459C0A00F8240D /* Extensions+UIView.swift */; };
+		133055972A459C0A00F8240D /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055962A459C0A00F8240D /* Extension+UIView.swift */; };
+		1330559B2A45BB0100F8240D /* MainNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330559A2A45BB0100F8240D /* MainNaviController.swift */; };
+		1330559D2A45BDF900F8240D /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330559C2A45BDF900F8240D /* SearchController.swift */; };
+		133055A02A46952300F8240D /* Extension+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330559F2A46952300F8240D /* Extension+DateFormatter.swift */; };
+		133055A22A4727EB00F8240D /* SearchLectureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055A12A4727EB00F8240D /* SearchLectureCell.swift */; };
+		133055A82A47495E00F8240D /* Extension+SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055A72A47495E00F8240D /* Extension+SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +52,12 @@
 		133055902A45577B00F8240D /* WeekDayColumnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayColumnCell.swift; sourceTree = "<group>"; };
 		133055922A45976D00F8240D /* TimeIndexTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndexTableView.swift; sourceTree = "<group>"; };
 		133055942A459BD300F8240D /* TimeIndexCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndexCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		133055962A459C0A00F8240D /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		133055962A459C0A00F8240D /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		1330559A2A45BB0100F8240D /* MainNaviController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNaviController.swift; sourceTree = "<group>"; };
+		1330559C2A45BDF900F8240D /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		1330559F2A46952300F8240D /* Extension+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+DateFormatter.swift"; sourceTree = "<group>"; };
+		133055A12A4727EB00F8240D /* SearchLectureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLectureCell.swift; sourceTree = "<group>"; };
+		133055A72A47495E00F8240D /* Extension+SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SwiftUIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +94,11 @@
 			children = (
 				133055502A431CB900F8240D /* AppDelegate.swift */,
 				133055522A431CB900F8240D /* SceneDelegate.swift */,
+				1330559A2A45BB0100F8240D /* MainNaviController.swift */,
 				133055542A431CB900F8240D /* ViewController.swift */,
 				133055692A43280700F8240D /* APIServices */,
+				1330559E2A45E23800F8240D /* Extensions */,
+				133055A92A4749CA00F8240D /* Search */,
 				133055852A44B2B700F8240D /* TimeTableConfigures */,
 				133055592A431CBA00F8240D /* Assets.xcassets */,
 				1330555B2A431CBA00F8240D /* LaunchScreen.storyboard */,
@@ -108,7 +121,6 @@
 		133055852A44B2B700F8240D /* TimeTableConfigures */ = {
 			isa = PBXGroup;
 			children = (
-				133055962A459C0A00F8240D /* Extensions+UIView.swift */,
 				1330558C2A4533B100F8240D /* TimeTableUIPropertyValues.swift */,
 				1330558E2A45493F00F8240D /* TimeTableView.swift */,
 				133055982A45A2EA00F8240D /* WeekViewCells */,
@@ -134,6 +146,25 @@
 				133055882A44B30200F8240D /* WeekDayColumnTableView.swift */,
 			);
 			path = ColumViews;
+			sourceTree = "<group>";
+		};
+		1330559E2A45E23800F8240D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				133055962A459C0A00F8240D /* Extension+UIView.swift */,
+				1330559F2A46952300F8240D /* Extension+DateFormatter.swift */,
+				133055A72A47495E00F8240D /* Extension+SwiftUIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		133055A92A4749CA00F8240D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1330559C2A45BDF900F8240D /* SearchController.swift */,
+				133055A12A4727EB00F8240D /* SearchLectureCell.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,15 +249,20 @@
 				133055932A45976D00F8240D /* TimeIndexTableView.swift in Sources */,
 				133055892A44B30200F8240D /* WeekDayColumnTableView.swift in Sources */,
 				1330558B2A45297F00F8240D /* TimeScheduleCell.swift in Sources */,
+				133055A02A46952300F8240D /* Extension+DateFormatter.swift in Sources */,
 				1330556D2A4341CF00F8240D /* LecturesResponseModel.swift in Sources */,
+				133055A82A47495E00F8240D /* Extension+SwiftUIView.swift in Sources */,
 				133055512A431CB900F8240D /* AppDelegate.swift in Sources */,
 				133055912A45577B00F8240D /* WeekDayColumnCell.swift in Sources */,
 				133055682A4325C300F8240D /* HTTPClient.swift in Sources */,
+				1330559D2A45BDF900F8240D /* SearchController.swift in Sources */,
+				1330559B2A45BB0100F8240D /* MainNaviController.swift in Sources */,
 				1330558F2A45493F00F8240D /* TimeTableView.swift in Sources */,
 				133055532A431CB900F8240D /* SceneDelegate.swift in Sources */,
+				133055A22A4727EB00F8240D /* SearchLectureCell.swift in Sources */,
 				1330556B2A43282900F8240D /* LecturesEndPoints.swift in Sources */,
 				1330558D2A4533B100F8240D /* TimeTableUIPropertyValues.swift in Sources */,
-				133055972A459C0A00F8240D /* Extensions+UIView.swift in Sources */,
+				133055972A459C0A00F8240D /* Extension+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
