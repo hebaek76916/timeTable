@@ -35,6 +35,9 @@
 		133055B22A47734600F8240D /* TimeIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B12A47734600F8240D /* TimeIndexTableViewCell.swift */; };
 		133055B42A4852A400F8240D /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B32A4852A400F8240D /* Extension+UIColor.swift */; };
 		133055B82A4862FB00F8240D /* TimeTableEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B72A4862FB00F8240D /* TimeTableEndPoints.swift */; };
+		133055BA2A4878A100F8240D /* TimeScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B92A4878A100F8240D /* TimeScheduleModel.swift */; };
+		133055BC2A487BEF00F8240D /* TimeTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055BB2A487BEF00F8240D /* TimeTableService.swift */; };
+		133055BE2A487E9200F8240D /* TimeTableResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055BD2A487E9200F8240D /* TimeTableResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		133055B12A47734600F8240D /* TimeIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndexTableViewCell.swift; sourceTree = "<group>"; };
 		133055B32A4852A400F8240D /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		133055B72A4862FB00F8240D /* TimeTableEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableEndPoints.swift; sourceTree = "<group>"; };
+		133055B92A4878A100F8240D /* TimeScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeScheduleModel.swift; sourceTree = "<group>"; };
+		133055BB2A487BEF00F8240D /* TimeTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableService.swift; sourceTree = "<group>"; };
+		133055BD2A487E9200F8240D /* TimeTableResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				1330558C2A4533B100F8240D /* TimeTableUIPropertyValues.swift */,
+				133055B92A4878A100F8240D /* TimeScheduleModel.swift */,
 				1330558E2A45493F00F8240D /* TimeTableView.swift */,
 				133055982A45A2EA00F8240D /* WeekViewCells */,
 			);
@@ -203,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				133055B72A4862FB00F8240D /* TimeTableEndPoints.swift */,
+				133055BB2A487BEF00F8240D /* TimeTableService.swift */,
+				133055BD2A487E9200F8240D /* TimeTableResponseModel.swift */,
 			);
 			path = TimeTable;
 			sourceTree = "<group>";
@@ -288,7 +297,10 @@
 				133055AF2A4763D500F8240D /* DetailMemoCell.swift in Sources */,
 				133055892A44B30200F8240D /* WeekDayColumnTableView.swift in Sources */,
 				1330558B2A45297F00F8240D /* TimeScheduleCell.swift in Sources */,
+				133055BA2A4878A100F8240D /* TimeScheduleModel.swift in Sources */,
 				133055A02A46952300F8240D /* Extension+DateFormatter.swift in Sources */,
+				133055BE2A487E9200F8240D /* TimeTableResponseModel.swift in Sources */,
+				133055BC2A487BEF00F8240D /* TimeTableService.swift in Sources */,
 				1330556D2A4341CF00F8240D /* LecturesResponseModel.swift in Sources */,
 				133055A82A47495E00F8240D /* Extension+SwiftUIView.swift in Sources */,
 				133055512A431CB900F8240D /* AppDelegate.swift in Sources */,
@@ -446,7 +458,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3F6RB5JZKP;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TimeTable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -474,7 +485,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3F6RB5JZKP;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TimeTable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

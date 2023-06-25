@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
+    case delete = "DELETE"
+}
+
 public protocol HTTPClientTask {
     func cancel()
 }
@@ -18,6 +24,12 @@ public protocol HTTPClient {
     ///  Clients are responsible to dispatch to appropriate threads, if needed
     @discardableResult
     func get(from url: URL, completion: @escaping (Result) -> Void) -> HTTPClientTask
+
+    @discardableResult
+    func post(from url: URL, body: [String: Any], completion: @escaping (Result) -> Void) -> HTTPClientTask
+    
+    @discardableResult
+    func delete(from url: URL, body: [String: Any], completion: @escaping (Result) -> Void) -> HTTPClientTask
 }
 
 class URLSessionHTTPClient: HTTPClient {
@@ -67,7 +79,7 @@ class URLSessionHTTPClient: HTTPClient {
         return URLSessionTaskWrapper(wrapped: task)
     }
     
-    func post(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+    func post(from url: URL, body: [String: Any], completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         var request = setHeader(url: url)
         request.httpMethod = "POST"
                 
@@ -91,15 +103,9 @@ class URLSessionHTTPClient: HTTPClient {
         return URLSessionTaskWrapper(wrapped: task)
     }
     
-    enum HTTPMethod: String {
-        case get = "GET"
-        case post = "POST"
-        case delete = "DELETE"
-    }
-    
-    func request(from url: URL, method: HTTPMethod, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+    func delete(from url: URL, body: [String: Any], completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         var request = setHeader(url: url)
-        request.httpMethod = method.rawValue
+        request.httpMethod = "DELETE"
                 
         let task = session.dataTask(with: request) { data, response, error in
             completion(Result {
@@ -114,12 +120,12 @@ class URLSessionHTTPClient: HTTPClient {
                 } else {
                     throw UnexpectedValuesRepresentation()
                 }
-            }
-            )
+            })
         }
         task.resume()
         return URLSessionTaskWrapper(wrapped: task)
     }
+
     
     private func setHeader(url: URL) -> URLRequest {
         var request = URLRequest(url: url)

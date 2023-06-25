@@ -11,11 +11,16 @@ struct TimeTableUIPropertyValues {
     
     // 1 minute gap height
     static let minuteGap: CGFloat = 1
+    
     static var hourGap: CGFloat {
         return Self.minuteGap * 60
     }
     
     static let weekDayHeaderHeight: CGFloat = 50
+    
+    static let shownTimes = 16
+    
+    static let timeTableHeight: CGFloat = hourGap * CGFloat(shownTimes) + weekDayHeaderHeight
     
     static var timeTableCollectionFlowLayout: UICollectionViewFlowLayout = {
         let flow = UICollectionViewFlowLayout()

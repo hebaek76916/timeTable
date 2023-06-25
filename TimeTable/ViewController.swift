@@ -40,7 +40,7 @@ class ViewController: UIViewController {
 
     private func setUpUI() {
 
-        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: TimeTableUIPropertyValues.hourGap * 24 + 50)
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: TimeTableUIPropertyValues.timeTableHeight)
         scrollView.frame = view.frame
         scrollView.backgroundColor = .orange
         view.addSubview(scrollView)
@@ -51,8 +51,7 @@ class ViewController: UIViewController {
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ].forEach { $0.isActive = true }
 
-
-        weekView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: TimeTableUIPropertyValues.hourGap * 24 + 50)
+        weekView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: TimeTableUIPropertyValues.timeTableHeight)
         scrollView.addSubview(weekView)
     }
 

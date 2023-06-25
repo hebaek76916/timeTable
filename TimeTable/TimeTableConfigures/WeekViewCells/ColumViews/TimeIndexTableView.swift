@@ -38,7 +38,7 @@ class TimeIndexTableView: UITableView {
 extension TimeIndexTableView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 24 - 8
+        return TimeTableUIPropertyValues.shownTimes
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
