@@ -14,7 +14,8 @@ class TimeIndexTableViewCell: UITableViewCell {
     let timeLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .purple
-        label.font = .systemFont(ofSize: 8)
+        label.font = .systemFont(ofSize: 13)
+        label.numberOfLines = 0
         return label
     }()
     
@@ -23,11 +24,11 @@ class TimeIndexTableViewCell: UITableViewCell {
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(timeLabel)
         [
-            timeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            timeLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
             timeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ].forEach { $0.isActive = true }
-        contentView.layer.borderWidth = 3
-        contentView.layer.borderColor = UIColor.green.cgColor
+        contentView.layer.borderWidth = 2
+        contentView.layer.borderColor = UIColor.systemPink.cgColor
         
     }
     

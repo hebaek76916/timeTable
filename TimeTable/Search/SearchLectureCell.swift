@@ -80,16 +80,7 @@ struct LectureView_Previews: PreviewProvider {
     static var previews: some View {
         LectureView(
             lecture: LectureData(
-                item:
-                    Item(
-                        dayofweek: [.월, .금],
-                        code: "AAAA-AA",
-                        location: "위치",
-                        lecture: "프로그래밍 기초",
-                        professor: "김말똥",
-                        startTime: "10:00",
-                        endTime: "11:00"
-                    )
+                item: LecturesResponse.temp.first!
             )
         )
     }

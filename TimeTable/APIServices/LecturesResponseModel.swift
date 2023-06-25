@@ -45,6 +45,28 @@ struct LecturesResponse: Decodable {
         case count = "Count"
         case scannedCount = "ScannedCount"
     }
+    
+    static let temp =
+    [
+        Item(
+            dayofweek: [.월, .금],
+            code: "AAAA-AA",
+            location: "위치",
+            lecture: "프로그래밍 기초",
+            professor: "김말똥",
+            startTime: "10:00",
+            endTime: "11:00"
+        ),
+        Item(
+            dayofweek: [.월, .수],
+            code: "ddfasdf",
+            location: "위치",
+            lecture: "월tn강",
+            professor: "삐바루",
+            startTime: "08:00",
+            endTime: "09:30"
+        )
+    ]
 }
 
 struct Item: Decodable {
@@ -64,7 +86,6 @@ struct Item: Decodable {
         
         self.endTime = endTime
     }
-    
     
     var start: Date? {
         guard let startTime else { return nil }
@@ -90,21 +111,12 @@ struct Item: Decodable {
         case endTime = "end_time"
     }
     
-    enum Dayofweek: String, Decodable {
-        case 월, 화, 수, 목, 금, 토, 일
+}
 
-        var weekDay: WeekDay {
-            switch self {
-            case .월 : return .mon
-            case .화 : return .tue
-            case .수 : return .wed
-            case .목 : return .thu
-            case .금 : return .fri
-            case .토 : return .sat
-            case .일 : return .sun
-            }
-        }
-    }
+enum Dayofweek: String, Decodable {
+    case 월, 화, 수, 목, 금, 토, 일
+    
+    static let schoolDays = [Dayofweek.월, .화, .수, .목, .금]
 }
 
 enum LectureResponseMapper {

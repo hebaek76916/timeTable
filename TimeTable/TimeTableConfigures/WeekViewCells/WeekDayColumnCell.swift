@@ -13,9 +13,16 @@ class WeekDayColumnCell: UICollectionViewCell {
     
     private var columnView: WeekDayColumnTableView?
     
-    var weekDay: WeekDay = .mon {
+    var weekDay: Dayofweek = .월 {
         didSet {
             columnView?.weekDay = self.weekDay
+        }
+    }
+    
+    var schedules = [TimeScheduleModel]() {
+        didSet {
+            columnView?.schedules = self.schedules
+            //TODO: reload data?
         }
     }
 
