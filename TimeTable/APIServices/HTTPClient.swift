@@ -44,18 +44,9 @@ class URLSessionHTTPClient: HTTPClient {
     }
     
     func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
-        
-        var request = URLRequest(url: url)
+        var request = setHeader(url: url)
         request.httpMethod = "GET"
-        request.setValue(
-            URLSessionHTTPClient.apiKey,
-            forHTTPHeaderField: "x-api-key"
-        )
-        request.setValue(
-            "application/json",
-            forHTTPHeaderField: "Content-Type"
-        )
-        
+
         let task = session.dataTask(with: request) { data, response, error in
             completion(Result {
                 if let error {
@@ -75,4 +66,73 @@ class URLSessionHTTPClient: HTTPClient {
         task.resume()
         return URLSessionTaskWrapper(wrapped: task)
     }
+    
+    func post(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+        var request = setHeader(url: url)
+        request.httpMethod = "POST"
+                
+        let task = session.dataTask(with: request) { data, response, error in
+            completion(Result {
+                if let error {
+                    throw error
+                }
+                
+                if let data,
+                   let response = response as? HTTPURLResponse
+                {
+                    return (data, response)
+                } else {
+                    throw UnexpectedValuesRepresentation()
+                }
+            }
+            )
+        }
+        task.resume()
+        return URLSessionTaskWrapper(wrapped: task)
+    }
+    
+    enum HTTPMethod: String {
+        case get = "GET"
+        case post = "POST"
+        case delete = "DELETE"
+    }
+    
+    func request(from url: URL, method: HTTPMethod, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
+        var request = setHeader(url: url)
+        request.httpMethod = method.rawValue
+                
+        let task = session.dataTask(with: request) { data, response, error in
+            completion(Result {
+                if let error {
+                    throw error
+                }
+                
+                if let data,
+                   let response = response as? HTTPURLResponse
+                {
+                    return (data, response)
+                } else {
+                    throw UnexpectedValuesRepresentation()
+                }
+            }
+            )
+        }
+        task.resume()
+        return URLSessionTaskWrapper(wrapped: task)
+    }
+    
+    private func setHeader(url: URL) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.setValue(
+            URLSessionHTTPClient.apiKey,
+            forHTTPHeaderField: "x-api-key"
+        )
+        request.setValue(
+            "application/json",
+            forHTTPHeaderField: "Content-Type"
+        )
+        return request
+    }
 }
+
+

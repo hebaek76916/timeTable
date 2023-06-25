@@ -12,7 +12,6 @@
 		133055552A431CB900F8240D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055542A431CB900F8240D /* ViewController.swift */; };
 		1330555A2A431CBA00F8240D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133055592A431CBA00F8240D /* Assets.xcassets */; };
 		1330555D2A431CBA00F8240D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1330555B2A431CBA00F8240D /* LaunchScreen.storyboard */; };
-		133055662A4320E500F8240D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 133055652A4320E500F8240D /* Alamofire */; };
 		133055682A4325C300F8240D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055672A4325C300F8240D /* HTTPClient.swift */; };
 		1330556B2A43282900F8240D /* LecturesEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330556A2A43282900F8240D /* LecturesEndPoints.swift */; };
 		1330556D2A4341CF00F8240D /* LecturesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330556C2A4341CF00F8240D /* LecturesResponseModel.swift */; };
@@ -35,6 +34,7 @@
 		133055AF2A4763D500F8240D /* DetailMemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055AE2A4763D500F8240D /* DetailMemoCell.swift */; };
 		133055B22A47734600F8240D /* TimeIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B12A47734600F8240D /* TimeIndexTableViewCell.swift */; };
 		133055B42A4852A400F8240D /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B32A4852A400F8240D /* Extension+UIColor.swift */; };
+		133055B82A4862FB00F8240D /* TimeTableEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133055B72A4862FB00F8240D /* TimeTableEndPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +68,7 @@
 		133055AE2A4763D500F8240D /* DetailMemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMemoCell.swift; sourceTree = "<group>"; };
 		133055B12A47734600F8240D /* TimeIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeIndexTableViewCell.swift; sourceTree = "<group>"; };
 		133055B32A4852A400F8240D /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		133055B72A4862FB00F8240D /* TimeTableEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableEndPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133055662A4320E500F8240D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				133055672A4325C300F8240D /* HTTPClient.swift */,
-				1330556A2A43282900F8240D /* LecturesEndPoints.swift */,
-				1330556E2A4343DD00F8240D /* LecturesService.swift */,
-				1330556C2A4341CF00F8240D /* LecturesResponseModel.swift */,
+				133055B62A4862D700F8240D /* TimeTable */,
+				133055B52A4862BE00F8240D /* Lecture */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -190,6 +189,24 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		133055B52A4862BE00F8240D /* Lecture */ = {
+			isa = PBXGroup;
+			children = (
+				1330556A2A43282900F8240D /* LecturesEndPoints.swift */,
+				1330556E2A4343DD00F8240D /* LecturesService.swift */,
+				1330556C2A4341CF00F8240D /* LecturesResponseModel.swift */,
+			);
+			path = Lecture;
+			sourceTree = "<group>";
+		};
+		133055B62A4862D700F8240D /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				133055B72A4862FB00F8240D /* TimeTableEndPoints.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,7 +224,6 @@
 			);
 			name = TimeTable;
 			packageProductDependencies = (
-				133055652A4320E500F8240D /* Alamofire */,
 			);
 			productName = TimeTable;
 			productReference = 1330554D2A431CB900F8240D /* TimeTable.app */;
@@ -238,7 +254,6 @@
 			);
 			mainGroup = 133055442A431CB900F8240D;
 			packageReferences = (
-				133055642A4320E500F8240D /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1330554E2A431CB900F8240D /* Products */;
 			projectDirPath = "";
@@ -288,6 +303,7 @@
 				133055532A431CB900F8240D /* SceneDelegate.swift in Sources */,
 				133055A22A4727EB00F8240D /* SearchLectureCell.swift in Sources */,
 				133055AD2A47508F00F8240D /* DetailDescriptionsViewCell.swift in Sources */,
+				133055B82A4862FB00F8240D /* TimeTableEndPoints.swift in Sources */,
 				1330556B2A43282900F8240D /* LecturesEndPoints.swift in Sources */,
 				1330558D2A4533B100F8240D /* TimeTableUIPropertyValues.swift in Sources */,
 				133055972A459C0A00F8240D /* Extension+UIView.swift in Sources */,
@@ -430,6 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3F6RB5JZKP;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TimeTable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,6 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3F6RB5JZKP;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TimeTable/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -498,25 +516,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		133055642A4320E500F8240D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		133055652A4320E500F8240D /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 133055642A4320E500F8240D /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 133055452A431CB900F8240D /* Project object */;
 }

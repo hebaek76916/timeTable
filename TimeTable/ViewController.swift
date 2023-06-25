@@ -28,17 +28,14 @@ class ViewController: UIViewController {
         setUpUI()
         weekView.items = LecturesResponse.temp
         
-        // Register for a specific notification
+        // timeTableView cell selected
         NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: Notification.Name("ExampleNotification"), object: nil)
-
     }
     
     @objc func handleNotification(_ notification: Notification) {
-        // Handle the notification here
-        if let item = notification.object as? Item {
-            let vc = LectureDetailViewController(.edit, item: item)
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        guard let item = notification.object as? Item else { return }
+        let vc = LectureDetailViewController(.edit, item: item)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     private func setUpUI() {
